@@ -11,7 +11,10 @@ const testCase10 = "L  ZL Z";
 const testCase11 = "";
 const testCase12 = " L L Z";
 
-const testCaseToUse = testCase11;
+const lion = "L";
+const zebra = "Z";
+
+const testCaseToUse = testCase12;
 const testCaseLength = testCaseToUse.length
 
 
@@ -24,7 +27,7 @@ let noAnimalInSavannah = 0;
 
 for (let currentAnimal = 0; currentAnimal < testCaseLength; currentAnimal++) {
 
-    if (testCaseToUse[currentAnimal] === "Z" || testCaseToUse[currentAnimal] === " ") {
+    if (testCaseToUse[currentAnimal] === zebra || testCaseToUse[currentAnimal] === " ") {
         onlyZebraInSavannah++;
     }
 
@@ -32,13 +35,13 @@ for (let currentAnimal = 0; currentAnimal < testCaseLength; currentAnimal++) {
         noAnimalInSavannah++;
     }
 
-    if (testCaseToUse[currentAnimal] === "L" || testCaseToUse[currentAnimal] === " ") {
+    if (testCaseToUse[currentAnimal] === lion || testCaseToUse[currentAnimal] === " ") {
         onlyLionInSavannah++;
     }
 
     for (let nextCurrentAnimal = currentAnimal + 1; nextCurrentAnimal < testCaseToUse.length; nextCurrentAnimal++) {
-        if (testCaseToUse[currentAnimal] === "L") {
-            if (testCaseToUse[nextCurrentAnimal] === "Z") {
+        if (testCaseToUse[currentAnimal] === lion) {
+            if (testCaseToUse[nextCurrentAnimal] === zebra) {
                 currentDistance = nextCurrentAnimal - currentAnimal - 1;
                 if (currentDistance < minimumDistance) {
                     minimumDistance = currentDistance;
@@ -46,8 +49,8 @@ for (let currentAnimal = 0; currentAnimal < testCaseLength; currentAnimal++) {
             }
         }
 
-        if (testCaseToUse[currentAnimal] === "Z") {
-            if (testCaseToUse[nextCurrentAnimal] === "L") {
+        if (testCaseToUse[currentAnimal] === zebra) {
+            if (testCaseToUse[nextCurrentAnimal] === lion) {
                 currentDistance = nextCurrentAnimal - currentAnimal - 1;
                 if (currentDistance < minimumDistance) {
                     minimumDistance = currentDistance;
