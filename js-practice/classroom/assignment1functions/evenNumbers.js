@@ -23,7 +23,7 @@ function even(startOfRange, endOfRange) {
 }
 
 function testEven(startOfRange, endOfRange, expectedValue) {
-  let actualValue = even(startOfRange, endOfRange);
+  const actualValue = even(startOfRange, endOfRange);
   composeMessage(startOfRange, endOfRange, actualValue, expectedValue);
 }
 
