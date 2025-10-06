@@ -3,7 +3,7 @@ function printMessage(message) {
 }
 
 function composeMessage(startOfRange, endOfRange, actual, expected) {
-  const result = (expected === actual) ? "✅" : "❌";
+  const result = expected === actual ? "✅" : "❌";
   let message = result + " Prime numbers between ";
   message += startOfRange + "-" + endOfRange;
   message += " are " + actual + ", and should be " + expected;
