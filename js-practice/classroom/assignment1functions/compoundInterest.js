@@ -16,17 +16,20 @@ function composeMessage(prinpal, time, rate, expected, actual) {
 }
 
 function calculateAmount(principal, time, rate) {
+
   for (let year = 1; year <= time; year++) {
     const SIForCurrYear = (principal * rate) / 100;
     principal = principal + SIForCurrYear;
   }
   const totalAmount = principal;
+
   return totalAmount;
 }
 
 function calculateCI(principal, time, rate) {
   const totalAmount = calculateAmount(principal, time, rate);
   const compoundInterest = totalAmount - principal;
+
   return compoundInterest;
 }
 
