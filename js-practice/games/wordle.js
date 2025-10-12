@@ -73,9 +73,7 @@ function repeatTheGame() {
 
   while (chances <= 5) {
     console.log('Attempt:', chances);
-    console.log(hiddenWord);
     const userInput = getUserInput();
-    console.log(userInput);
     if (isWordMatched(hiddenWord, userInput)) {
       return;
     }
