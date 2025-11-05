@@ -31,6 +31,8 @@ function selectOperation(userInput) {
       return multiply;
     case 'divide':
       return divide;
+    case 'power':
+      return power;
   }
 }
 
