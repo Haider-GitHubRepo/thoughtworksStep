@@ -1,3 +1,4 @@
+// Problem 1 : Festival Ribbon Count
 const count = (result, color) => {
   result = color === 'blue' ? result + 1 : result;
   return result;
