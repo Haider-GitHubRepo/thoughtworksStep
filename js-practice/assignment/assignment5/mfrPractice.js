@@ -9,7 +9,7 @@ const countBlueRibbons = (count) => {
   return ribbons.reduce(count, 0);
 };
 
-console.log('No of Blue Ribbons =', countBlueRibbons(count));
+console.log('\nNo of Blue Ribbons =', countBlueRibbons(count));
 
 // Problem 2 : Stargazing Log
 const unique = (accumulator, element) => {
@@ -20,22 +20,23 @@ const unique = (accumulator, element) => {
 };
 
 const observations = [["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]];
-console.log('Constellations spotted =', observations.flat().reduce(unique, []));
+console.log('\nConstellations spotted =', observations.flat().reduce(unique, []));
 
 // Problem 3 : Birdwatching Duplicate Removal
 const birdSpecies = ["sparrow", "crow", "sparrow", "eagle", "crow"];
-console.log('Species seen are :', birdSpecies.reduce(unique, []));
+console.log('\nSpecies seen are :', birdSpecies.reduce(unique, []));
 
 // Problem 4 : Classroom Attendance Check
 const students = [["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]];
-console.log('Distinct Students :', students.flat().reduce(unique, []));
+console.log('\nDistinct Students :', students.flat().reduce(unique, []));
 
 // Problem 5 : Candy Jar Stocking
 const countCandies = (result, element) => {
   result += element;
   return result;
-}
+};
+
 const candyLogs = [[5, 3], [2], [4, 1]];
-console.log('Total candies = ', candyLogs.flat().reduce(countCandies, 0));
+console.log('\nTotal candies = ', candyLogs.flat().reduce(countCandies, 0));
 
 
