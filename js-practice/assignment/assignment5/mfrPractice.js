@@ -10,3 +10,14 @@ const countBlueRibbons = (count) => {
 };
 
 console.log('No of Blue Ribbons =', countBlueRibbons(count));
+
+// Problem 2 : Stargazing Log
+const unique = (constellations, element) => {
+  if (!constellations.includes(element)) {
+    constellations.push(element);
+  }
+  return constellations;
+}
+
+const observations = [["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]];
+console.log('Constellations spotted =', observations.flat().reduce(unique, []));
