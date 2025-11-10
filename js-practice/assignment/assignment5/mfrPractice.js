@@ -1,7 +1,10 @@
 // Problem 1 : Festival Ribbon Count
-const count = (result, color) => {
-  result = color === "blue" ? result + 1 : result;
-  return result;
+
+const countTheElement = (result, element, eleToCheck) =>
+  element === eleToCheck ? result + 1 : result;
+
+const countBlue = (result, color) => {
+  return countTheElement(result, color, "blue");
 };
 
 const countBlueRibbons = (count) => {
@@ -9,7 +12,7 @@ const countBlueRibbons = (count) => {
   return ribbons.reduce(count, 0);
 };
 
-console.log("\nNo of Blue Ribbons =", countBlueRibbons(count));
+console.log("\nNo of Blue Ribbons =", countBlueRibbons(countBlue));
 
 // Problem 2 : Stargazing Log
 const unique = (accumulator, element) => {
