@@ -104,3 +104,12 @@ const countDune = (result, book) => {
 const times = books.reduce(countDune, 0);
 
 console.log("\nNumber of times “Dune” was returned =", times);
+
+// Problem 11 : Lunchbox Ingredient Inventory
+const ingredients = [["rice", "lentils"], ["rice"], ["curd", "lentils"]];
+
+const distinctIngredients = ingredients
+  .flatMap((x) => x)
+  .reduce(unique, []);
+
+console.log("\nDistinct Ingredients :", distinctIngredients);
