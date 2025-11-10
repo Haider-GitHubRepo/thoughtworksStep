@@ -160,3 +160,16 @@ const wordsStartsWithA = sentences
   .filter((x) => x.toUpperCase().startsWith("A"));
 
 console.log("\nWords Start with A", wordsStartsWithA);
+
+// Problem 82 : Fragile Shipment
+const shipments = [
+  ["Textbooks", "Durable"],
+  ["Glassware Set", "Fragile"],
+  ["T-Shirts", "Durable"],
+  ["Ceramic Mug", "Fragile"],
+  ["Pillows", "Durable"],
+];
+
+const fragileShipments = shipments.filter((x) => x[1] === "Fragile");
+
+console.log("\nFragile Shipments :", fragileShipments);
