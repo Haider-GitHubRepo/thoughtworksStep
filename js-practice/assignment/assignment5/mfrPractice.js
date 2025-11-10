@@ -56,3 +56,12 @@ const hasDo = sequences
   .some((note) => note === "do");
 
 console.log("\nDoes any group sang 'do' :", hasDo);
+
+// Problem 7 : Weather Sensor Validation
+const temperatures = [[22, 23], [25, 24, 22], [29]];
+
+const isBelow32 = temperatures
+  .flatMap((x) => x)
+  .every((temp) => temp < 32);
+
+console.log("\nIs every temperature below 32 :", isBelow32);
