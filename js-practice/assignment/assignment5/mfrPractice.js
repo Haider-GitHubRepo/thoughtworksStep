@@ -65,3 +65,17 @@ const isBelow32 = temperatures
   .every((temp) => temp < 32);
 
 console.log("\nIs every temperature below 32 :", isBelow32);
+
+// Problem 8 : Fitness Tracker Miles
+
+const runnerLogs = [[2, 3, 2], [4], [1, 1]];
+
+const total = (result, element) => {
+  return result += element;
+};
+
+const totalMiles = runnerLogs
+  .flatMap((x) => x)
+  .reduce(total, 0);
+
+console.log("\nTotal miles =", totalMiles);
