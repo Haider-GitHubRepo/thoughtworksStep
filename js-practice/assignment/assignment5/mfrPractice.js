@@ -20,7 +20,7 @@ const unique = (accumulator, element) => {
 };
 
 const observations = [["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]];
-console.log('\nConstellations spotted =', observations.flat().reduce(unique, []));
+console.log('\nConstellations spotted =', observations.flatMap(x => x).reduce(unique, []));
 
 // Problem 3 : Birdwatching Duplicate Removal
 const birdSpecies = ["sparrow", "crow", "sparrow", "eagle", "crow"];
@@ -28,7 +28,7 @@ console.log('\nSpecies seen are :', birdSpecies.reduce(unique, []));
 
 // Problem 4 : Classroom Attendance Check
 const students = [["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]];
-console.log('\nDistinct Students :', students.flat().reduce(unique, []));
+console.log('\nDistinct Students :', students.flatMap(x => x).reduce(unique, []));
 
 // Problem 5 : Candy Jar Stocking
 const countCandies = (result, element) => {
@@ -37,6 +37,6 @@ const countCandies = (result, element) => {
 };
 
 const candyLogs = [[5, 3], [2], [4, 1]];
-console.log('\nTotal candies = ', candyLogs.flat().reduce(countCandies, 0));
+console.log('\nTotal candies = ', candyLogs.flatMap(x => x).reduce(countCandies, 0));
 
 
