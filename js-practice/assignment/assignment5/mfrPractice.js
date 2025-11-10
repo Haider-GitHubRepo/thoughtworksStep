@@ -43,9 +43,11 @@ const countCandies = (result, element) => {
 };
 
 const candyLogs = [[5, 3], [2], [4, 1]];
+
 const totalCandies = candyLogs
   .flatMap((x) => x)
   .reduce(countCandies, 0);
+
 console.log("\nTotal candies = ", totalCandies);
 
 // Problem 6 : Music Rehearsal Notes
@@ -79,3 +81,12 @@ const totalMiles = runnerLogs
   .reduce(total, 0);
 
 console.log("\nTotal miles =", totalMiles);
+
+// Problem 9 : Art Workshop Color Variety
+const paintColors = [["blue", "yellow"], ["yellow", "green"], ["blue"]];
+
+const distinctColors = paintColors
+  .flatMap((x) => x)
+  .reduce(unique, []);
+
+console.log("\nDistinct Colors :", distinctColors);
