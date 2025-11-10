@@ -113,3 +113,15 @@ const distinctIngredients = ingredients
   .reduce(unique, []);
 
 console.log("\nDistinct Ingredients :", distinctIngredients);
+
+// Problem 64 : Reverse Dance Steps
+const danceSteps = ["step", "tap", "turn", "jump"];
+
+const reverse = (reversed, element) => {
+  reversed.unshift(element);
+  return reversed;
+};
+
+const reversedSteps = danceSteps.reduce(reverse, []);
+
+console.log("\nReversed Dance Steps are :", reversedSteps);
