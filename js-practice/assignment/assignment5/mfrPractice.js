@@ -1,3 +1,5 @@
+console.clear();
+
 // Problem 1 : Festival Ribbon Count
 
 const countTheElement = (result, element, eleToCheck) =>
@@ -125,3 +127,22 @@ const reverse = (reversed, element) => {
 const reversedSteps = danceSteps.reduce(reverse, []);
 
 console.log("\nReversed Dance Steps are :", reversedSteps);
+
+// Problem 65 : Frequency List
+const list = [1, 2, 3, 2, 1, 1];
+
+const frequencyList = (frequencyList, element) => {
+  const elem = frequencyList.find((x) => x[0] === element);
+
+  if (elem) {
+    elem[1] += 1;
+    return frequencyList;
+  }
+
+  frequencyList.push([element, 1]);
+  return frequencyList;
+};
+
+const frequencySummary = list.reduce(frequencyList, []);
+
+console.log("\nFrequency List :", frequencySummary);
