@@ -155,19 +155,8 @@ const sentences = [
   "An interesting phrase",
 ];
 
-const splitSentences = (sentence) => {
-  return sentence.split(" ");
-};
+const wordsStartsWithA = sentences
+  .flatMap((x) => x.split(" "))
+  .filter((x) => x.toUpperCase().startsWith("A"));
 
-const words = sentences
-  .flatMap(splitSentences);
-
-const startsWithA = (word) => {
-  return word
-    .toUpperCase()
-    .startsWith("A");
-};
-
-const wordsStartA = words.filter(startsWithA);
-
-console.log("\nWords Start with A", wordsStartA);
+console.log("\nWords Start with A", wordsStartsWithA);
