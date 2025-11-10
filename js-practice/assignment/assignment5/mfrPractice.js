@@ -93,3 +93,14 @@ const distinctColors = paintColors
   .reduce(unique, []);
 
 console.log("\nDistinct Colors :", distinctColors);
+
+// Problem 10 : Library Return Counter
+const books = ["Dune", "Dune", "Foundation", "Dune"];
+
+const countDune = (result, book) => {
+  return countTheElement(result, book, "Dune");
+};
+
+const times = books.reduce(countDune, 0);
+
+console.log("\nNumber of times “Dune” was returned =", times);
