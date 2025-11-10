@@ -1,6 +1,6 @@
 // Problem 1 : Festival Ribbon Count
 const count = (result, color) => {
-  result = color === 'blue' ? result + 1 : result;
+  result = color === "blue" ? result + 1 : result;
   return result;
 };
 
@@ -9,7 +9,7 @@ const countBlueRibbons = (count) => {
   return ribbons.reduce(count, 0);
 };
 
-console.log('\nNo of Blue Ribbons =', countBlueRibbons(count));
+console.log("\nNo of Blue Ribbons =", countBlueRibbons(count));
 
 // Problem 2 : Stargazing Log
 const unique = (accumulator, element) => {
@@ -21,20 +21,20 @@ const unique = (accumulator, element) => {
 
 const observations = [["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]];
 const constellations = observations
-  .flatMap(x => x)
+  .flatMap((x) => x)
   .reduce(unique, []);
-console.log('\nConstellations spotted =', constellations);
+console.log("\nConstellations spotted =", constellations);
 
 // Problem 3 : Birdwatching Duplicate Removal
 const birdSpecies = ["sparrow", "crow", "sparrow", "eagle", "crow"];
-console.log('\nSpecies seen are :', birdSpecies.reduce(unique, []));
+console.log("\nSpecies seen are :", birdSpecies.reduce(unique, []));
 
 // Problem 4 : Classroom Attendance Check
 const students = [["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]];
 const distinctStudents = students
-  .flatMap(x => x)
+  .flatMap((x) => x)
   .reduce(unique, []);
-console.log('\nDistinct Students :', distinctStudents);
+console.log("\nDistinct Students :", distinctStudents);
 
 // Problem 5 : Candy Jar Stocking
 const countCandies = (result, element) => {
@@ -44,8 +44,15 @@ const countCandies = (result, element) => {
 
 const candyLogs = [[5, 3], [2], [4, 1]];
 const totalCandies = candyLogs
-  .flatMap(x => x)
+  .flatMap((x) => x)
   .reduce(countCandies, 0);
-console.log('\nTotal candies = ', totalCandies);
+console.log("\nTotal candies = ", totalCandies);
 
+// Problem 6 : Music Rehearsal Notes
+const sequences = [["mi", "fa", "so"], ["do", "mi"], ["fa"]];
 
+const hasDo = sequences
+  .flatMap((x) => x)
+  .some((note) => note === "do");
+
+console.log("\nDoes any group sang 'do' :", hasDo);
