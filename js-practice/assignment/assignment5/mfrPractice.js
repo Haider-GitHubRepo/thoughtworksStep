@@ -21,3 +21,8 @@ const unique = (accumulator, element) => {
 
 const observations = [["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]];
 console.log('Constellations spotted =', observations.flat().reduce(unique, []));
+
+// Problem 3 : Birdwatching Duplicate Removal
+const birdSpecies = ["sparrow", "crow", "sparrow", "eagle", "crow"];
+console.log('Species seen are :', birdSpecies.reduce(unique, []));
+
