@@ -26,3 +26,7 @@ console.log('Constellations spotted =', observations.flat().reduce(unique, []));
 const birdSpecies = ["sparrow", "crow", "sparrow", "eagle", "crow"];
 console.log('Species seen are :', birdSpecies.reduce(unique, []));
 
+// Problem 4 : Classroom Attendance Check
+const students = [["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]];
+console.log('Distinct Students :', students.flat().reduce(unique, []));
+
