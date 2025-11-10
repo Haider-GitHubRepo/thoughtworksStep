@@ -146,3 +146,28 @@ const frequencyList = (frequencyList, element) => {
 const frequencySummary = list.reduce(frequencyList, []);
 
 console.log("\nFrequency List :", frequencySummary);
+
+// Problem : Words start with A
+const sentences = [
+  "just a phrase",
+  "also another phrase",
+  "arbitrary phrase",
+  "An interesting phrase",
+];
+
+const splitSentences = (sentence) => {
+  return sentence.split(" ");
+};
+
+const words = sentences
+  .flatMap(splitSentences);
+
+const startsWithA = (word) => {
+  return word
+    .toUpperCase()
+    .startsWith("A");
+};
+
+const wordsStartA = words.filter(startsWithA);
+
+console.log("\nWords Start with A", wordsStartA);
