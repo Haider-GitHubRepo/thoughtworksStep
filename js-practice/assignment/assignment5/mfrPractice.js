@@ -170,6 +170,8 @@ const shipments = [
   ["Pillows", "Durable"],
 ];
 
-const fragileShipments = shipments.filter((x) => x[1] === "Fragile");
+const fragileShipments = shipments
+  .filter((x) => x[1] === "Fragile")
+  .map((x) => x[0]);
 
 console.log("\nFragile Shipments :", fragileShipments);
